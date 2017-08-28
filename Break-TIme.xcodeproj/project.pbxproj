@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E8C7BD8465FB21726688FC6 /* Pods_Break_TIme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FADA2F5AC83956BD2F36646 /* Pods_Break_TIme.framework */; };
+		6F3CA9941F549C6F0072E777 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3CA9931F549C6F0072E777 /* DataService.swift */; };
 		6FF7A1C31F5497490011FC74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF7A1C21F5497490011FC74 /* AppDelegate.swift */; };
 		6FF7A1C51F5497490011FC74 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF7A1C41F5497490011FC74 /* FirstViewController.swift */; };
 		6FF7A1C71F5497490011FC74 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF7A1C61F5497490011FC74 /* SecondViewController.swift */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FADA2F5AC83956BD2F36646 /* Pods_Break_TIme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Break_TIme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5032B31B7A58FEED2AD481 /* Pods-Break-TIme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Break-TIme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Break-TIme/Pods-Break-TIme.release.xcconfig"; sourceTree = "<group>"; };
+		6F3CA9931F549C6F0072E777 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6FF7A1BF1F5497490011FC74 /* Break-TIme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Break-TIme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF7A1C21F5497490011FC74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FF7A1C41F5497490011FC74 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,8 @@
 		6FF7A1CB1F5497490011FC74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF7A1CE1F5497490011FC74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FF7A1D01F5497490011FC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FF7A1DB1F549A8C0011FC74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B1E6BBD69CD78CE7C9CA004 /* Pods-Break-TIme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Break-TIme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Break-TIme/Pods-Break-TIme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8C7BD8465FB21726688FC6 /* Pods_Break_TIme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60CB45D0A7FFC55B05AC20F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B1E6BBD69CD78CE7C9CA004 /* Pods-Break-TIme.debug.xcconfig */,
+				5B5032B31B7A58FEED2AD481 /* Pods-Break-TIme.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6FF7A1B61F5497490011FC74 = {
 			isa = PBXGroup;
 			children = (
 				6FF7A1C11F5497490011FC74 /* Break-TIme */,
 				6FF7A1C01F5497490011FC74 /* Products */,
+				60CB45D0A7FFC55B05AC20F8 /* Pods */,
+				75436D87A7CBD020DB82FA98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,65 @@
 		6FF7A1C11F5497490011FC74 /* Break-TIme */ = {
 			isa = PBXGroup;
 			children = (
+				6FF7A1DA1F5498740011FC74 /* Services */,
+				6FF7A1D91F5498710011FC74 /* Extensions */,
+				6FF7A1D81F54986F0011FC74 /* Model */,
+				6FF7A1D71F54986C0011FC74 /* View */,
+				6FF7A1D61F5498690011FC74 /* Controller */,
 				6FF7A1C21F5497490011FC74 /* AppDelegate.swift */,
-				6FF7A1C41F5497490011FC74 /* FirstViewController.swift */,
-				6FF7A1C61F5497490011FC74 /* SecondViewController.swift */,
 				6FF7A1C81F5497490011FC74 /* Main.storyboard */,
 				6FF7A1CB1F5497490011FC74 /* Assets.xcassets */,
 				6FF7A1CD1F5497490011FC74 /* LaunchScreen.storyboard */,
+				6FF7A1DB1F549A8C0011FC74 /* GoogleService-Info.plist */,
 				6FF7A1D01F5497490011FC74 /* Info.plist */,
 			);
 			path = "Break-TIme";
+			sourceTree = "<group>";
+		};
+		6FF7A1D61F5498690011FC74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FF7A1C41F5497490011FC74 /* FirstViewController.swift */,
+				6FF7A1C61F5497490011FC74 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6FF7A1D71F54986C0011FC74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FF7A1D81F54986F0011FC74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6FF7A1D91F5498710011FC74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6FF7A1DA1F5498740011FC74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6F3CA9931F549C6F0072E777 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75436D87A7CBD020DB82FA98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FADA2F5AC83956BD2F36646 /* Pods_Break_TIme.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FF7A1D31F5497490011FC74 /* Build configuration list for PBXNativeTarget "Break-TIme" */;
 			buildPhases = (
+				05BB95748337E66743A62769 /* [CP] Check Pods Manifest.lock */,
 				6FF7A1BB1F5497490011FC74 /* Sources */,
 				6FF7A1BC1F5497490011FC74 /* Frameworks */,
 				6FF7A1BD1F5497490011FC74 /* Resources */,
+				A3C73671DEDA463C79CF0FF5 /* [CP] Embed Pods Frameworks */,
+				DB7C304FB6C3A8BCDCDB06B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +206,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05BB95748337E66743A62769 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C73671DEDA463C79CF0FF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Break-TIme/Pods-Break-TIme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7C304FB6C3A8BCDCDB06B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Break-TIme/Pods-Break-TIme-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6FF7A1BB1F5497490011FC74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +262,7 @@
 				6FF7A1C71F5497490011FC74 /* SecondViewController.swift in Sources */,
 				6FF7A1C31F5497490011FC74 /* AppDelegate.swift in Sources */,
 				6FF7A1C51F5497490011FC74 /* FirstViewController.swift in Sources */,
+				6F3CA9941F549C6F0072E777 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +397,7 @@
 		};
 		6FF7A1D41F5497490011FC74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1E6BBD69CD78CE7C9CA004 /* Pods-Break-TIme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +413,7 @@
 		};
 		6FF7A1D51F5497490011FC74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5032B31B7A58FEED2AD481 /* Pods-Break-TIme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

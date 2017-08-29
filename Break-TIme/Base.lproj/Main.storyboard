@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-716" y="-875"/>
         </scene>
-        <!--FeedVC-->
+        <!--GroupsVC-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" userLabel="FeedVC" customClass="FeedVC" customModule="Break_TIme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="GroupsVC" customClass="GroupsVC" customModule="Break_TIme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nhu-lr-1Dj"/>
                         <viewControllerLayoutGuide type="bottom" id="c2x-A1-NcQ"/>
@@ -120,11 +120,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wp-3p-j2o">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rax-0m-u72">
-                                        <rect key="frame" x="160.5" y="34.5" width="54.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rax-0m-u72">
+                                        <rect key="frame" x="149.5" y="34.5" width="76" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ASF-if-jJW"/>
-                                            <constraint firstAttribute="width" constant="55" id="BF7-7y-YEA"/>
+                                            <constraint firstAttribute="width" constant="76" id="cFn-HX-xYJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <color key="textColor" red="0.15686275" green="0.99607849000000004" blue="0.078431374999999998" alpha="1" colorSpace="deviceRGB"/>
@@ -137,9 +137,6 @@
                                             <constraint firstAttribute="height" constant="30" id="5Wi-BL-i3A"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
-                                        <connections>
-                                            <segue destination="kNl-hc-4aF" kind="presentation" id="pdz-vy-SXe"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,7 +174,7 @@
                             <constraint firstItem="2Wp-3p-j2o" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ywi-ct-aZ5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="feed-tabIcon" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="groups-tabIcon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +226,7 @@
                                     <constraint firstItem="xSl-br-aWd" firstAttribute="centerX" secondItem="Y72-yA-2wl" secondAttribute="centerX" id="VKg-Xq-4ua"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-Gf-EzA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-Gf-EzA">
                                 <rect key="frame" x="16" y="90" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="375-jW-mcq"/>
@@ -297,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="1487.2" y="-1159.9700149925038"/>
         </scene>
-        <!--GroupsVC-->
+        <!--FeedVC-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="GroupsVC" customClass="GroupsVC" customModule="Break_TIme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="FeedVC" customClass="FeedVC" customModule="Break_TIme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykt-jo-FGn"/>
                         <viewControllerLayoutGuide type="bottom" id="r7a-HW-ZDC"/>
@@ -312,7 +309,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-33-pey">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ys-sh-83Y">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ys-sh-83Y">
                                         <rect key="frame" x="149.5" y="34.5" width="76" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="76" id="UAT-K0-zbz"/>
@@ -329,6 +326,9 @@
                                             <constraint firstAttribute="width" constant="30" id="SvM-dB-E99"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="kNl-hc-4aF" kind="presentation" id="Ors-fC-BVT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -344,13 +344,51 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="0.32512599009999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="HUt-gM-rIJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="100" id="HUt-gM-rIJ" customClass="FeedCell" customModule="Break_TIme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HUt-gM-rIJ" id="MfI-GX-6Hy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="jj7-Y4-Hjv">
+                                                    <rect key="frame" x="8" y="19" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="CtH-Ll-AYw"/>
+                                                        <constraint firstAttribute="height" constant="60" id="ff0-Zp-Ufk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-Md-R8K">
+                                                    <rect key="frame" x="73" y="32" width="294" height="55"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tktusharkatyal11@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="V4K-kO-pO2">
+                                                    <rect key="frame" x="71" y="8" width="296" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l5Y-Md-R8K" firstAttribute="trailing" secondItem="MfI-GX-6Hy" secondAttribute="trailingMargin" id="E6s-p5-gub"/>
+                                                <constraint firstItem="V4K-kO-pO2" firstAttribute="leading" secondItem="jj7-Y4-Hjv" secondAttribute="trailing" constant="3" id="Kaq-CL-JYj"/>
+                                                <constraint firstItem="l5Y-Md-R8K" firstAttribute="top" secondItem="V4K-kO-pO2" secondAttribute="bottom" constant="5" id="KvF-he-PYH"/>
+                                                <constraint firstItem="jj7-Y4-Hjv" firstAttribute="leading" secondItem="MfI-GX-6Hy" secondAttribute="leadingMargin" id="SbA-4F-ekq"/>
+                                                <constraint firstItem="V4K-kO-pO2" firstAttribute="trailing" secondItem="MfI-GX-6Hy" secondAttribute="trailingMargin" id="Vu8-fO-xiG"/>
+                                                <constraint firstItem="l5Y-Md-R8K" firstAttribute="leading" secondItem="jj7-Y4-Hjv" secondAttribute="trailing" constant="5" id="aPR-QW-NXy"/>
+                                                <constraint firstItem="V4K-kO-pO2" firstAttribute="top" secondItem="MfI-GX-6Hy" secondAttribute="topMargin" id="llk-Rj-ylO"/>
+                                                <constraint firstItem="jj7-Y4-Hjv" firstAttribute="centerY" secondItem="MfI-GX-6Hy" secondAttribute="centerY" id="x1P-Jt-rWU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="l5Y-Md-R8K" secondAttribute="bottom" constant="5" id="x2r-oC-eEX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <outlet property="feedContent" destination="l5Y-Md-R8K" id="BwV-Gn-9Pa"/>
+                                            <outlet property="userEmail" destination="V4K-kO-pO2" id="fhU-3a-WAu"/>
+                                            <outlet property="userProfileImg" destination="jj7-Y4-Hjv" id="37q-ud-cza"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -366,11 +404,14 @@
                             <constraint firstAttribute="trailing" secondItem="gZQ-33-pey" secondAttribute="trailing" id="uO2-Sy-9Xh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Groups" image="groups-tabIcon" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed-tabIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableViewFeed" destination="AJk-jS-Wkf" id="3Gd-Wi-7Cq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="-188"/>
+            <point key="canvasLocation" x="734" y="-92"/>
         </scene>
         <!--Item-->
         <scene sceneID="7yP-WF-QAO">
@@ -610,8 +651,8 @@
                         <color key="selectedImageTintColor" red="0.3921568627" green="0.86666666670000003" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="aGX-7k-xjS" kind="relationship" relationship="viewControllers" id="AoA-Gr-x65"/>
                     </connections>
                 </tabBarController>

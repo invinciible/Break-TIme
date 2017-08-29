@@ -18,7 +18,7 @@ class CreatePostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sendBtn.bindToKeyboard()
         // Do any additional setup after loading the view.
     }
 

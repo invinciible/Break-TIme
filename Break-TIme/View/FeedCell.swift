@@ -20,7 +20,10 @@ class FeedCell: UITableViewCell {
 
     func configureCell(message : Message , image : UIImage) {
         
-        userEmail.text = message.senderId
+        DataService.instance.getUserName(forUid: message.senderId) { (returnedUserName) in
+            self.userEmail.text = returnedUserName
+        }
+        
         feedContent.text = message.content
         userProfileImg.image = image
     }

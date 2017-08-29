@@ -17,13 +17,15 @@ class FeedVC: UIViewController {
         super.viewDidLoad()
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
-        
+        tableViewFeed.estimatedRowHeight = 120
+        tableViewFeed.rowHeight = UITableViewAutomaticDimension
     }
 
+    // to update the new feed
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DataService.instance.getAllFeedMessage { (returnedMessagesArray) in
-            self.messageArray = returnedMessagesArray
+            self.messageArray = returnedMessagesArray.reversed()
             self.tableViewFeed.reloadData()
         }
     }

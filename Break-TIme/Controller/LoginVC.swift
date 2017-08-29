@@ -10,26 +10,48 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    // outlets
+    @IBOutlet weak var passwordField: InsetTextField!
+    @IBOutlet weak var emailField: InsetTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailField.delegate = self
+        passwordField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Actions
+    @IBAction func closeBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil )
+    }
+    @IBAction func signInBtnPressed(_ sender: Any) {
+        
+        guard emailField.text != nil && passwordField.text != nil else {return}
+        AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!) { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+            print(String(describing :error?.localizedDescription))
+            }
+            AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registerError) in
+                if success {
+                    print("tush : success register")
+                    AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
+                        
+                        if success {
+                            print("tush : success login")
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    })
+                } else {
+                    print(String(describing: registerError?.localizedDescription))
+                }
+            })
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+extension LoginVC : UITextFieldDelegate {}

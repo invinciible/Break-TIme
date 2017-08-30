@@ -17,7 +17,7 @@ class FeedVC: UIViewController {
         super.viewDidLoad()
         tableViewFeed.delegate = self
         tableViewFeed.dataSource = self
-        tableViewFeed.estimatedRowHeight = 120
+        tableViewFeed.estimatedRowHeight = 100
         tableViewFeed.rowHeight = UITableViewAutomaticDimension
     }
 
@@ -46,8 +46,6 @@ extension FeedVC : UITableViewDelegate,UITableViewDataSource {
         cell.configureCell(message :message,image : image)
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
-    }
+   
 }
 

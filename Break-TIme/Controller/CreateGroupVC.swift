@@ -21,7 +21,9 @@ class CreateGroupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
 
  
@@ -32,3 +34,26 @@ class CreateGroupVC: UIViewController {
     }
     
 }
+extension CreateGroupVC : UITableViewDelegate,UITableViewDataSource  {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? userCell else {return UITableViewCell() }
+    cell.configureCell(profileImg: #imageLiteral(resourceName: "defaultProfileImage"), email: "tk@gmail.com", isSelected: true)
+    return cell
+    }
+    
+}
+
+
+
+
+
+
+
+

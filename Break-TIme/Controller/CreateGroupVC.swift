@@ -17,16 +17,36 @@ class CreateGroupVC: UIViewController {
     @IBOutlet weak var descriptionField: InsetTextField!
     @IBOutlet weak var titleField: InsetTextField!
     @IBOutlet weak var groupMembersLbl: UILabel!
+    // variable
+    var emailArray = [String]()
+    var selectedUserArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
-        
+        emailSearchField.delegate = self
+        emailSearchField.addTarget(self, action: #selector(emailFieldDidChanged), for: .editingChanged)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        doneBtn.isHidden = true
     }
 
  
+    @objc func emailFieldDidChanged() {
+        
+        if emailSearchField.text == "" {
+            emailArray = []
+            tableView.reloadData()
+        } else {
+            DataService.instance.getEmail(forSearchQuery: emailSearchField.text!, handler: { (returnedEmailArray) in
+                self.emailArray = returnedEmailArray
+                self.tableView.reloadData()
+            })
+        }
+    }
     // Actions
     @IBAction func doneBtnPressed(_ sender: Any) {
     }
@@ -40,16 +60,43 @@ extension CreateGroupVC : UITableViewDelegate,UITableViewDataSource  {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return emailArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? userCell else {return UITableViewCell() }
-    cell.configureCell(profileImg: #imageLiteral(resourceName: "defaultProfileImage"), email: "tk@gmail.com", isSelected: true)
+        if selectedUserArray.contains(emailArray[indexPath.row]) {
+             cell.configureCell(profileImg: #imageLiteral(resourceName: "defaultProfileImage"), email: emailArray[indexPath.row], isSelected: true)
+        } else {
+            cell.configureCell(profileImg: #imageLiteral(resourceName: "defaultProfileImage"), email: emailArray[indexPath.row], isSelected: false)
+        }
+    
     return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? userCell else {return}
+        if !selectedUserArray.contains(cell.emailLbl.text!) {
+            selectedUserArray.append(cell.emailLbl.text!)
+             groupMembersLbl.text = selectedUserArray.joined(separator: ", ")
+            doneBtn.isHidden = false
+        } else {
+            selectedUserArray = selectedUserArray.filter({ $0 != cell.emailLbl.text! })
+            if selectedUserArray.count >= 1{
+                groupMembersLbl.text = selectedUserArray.joined(separator: ", ")
+            } else {
+                groupMembersLbl.text = "Add people to your group"
+                doneBtn.isHidden = true
+            }
+        }
     }
     
 }
 
+extension CreateGroupVC : UITextFieldDelegate {
+    
+}
 
 
 

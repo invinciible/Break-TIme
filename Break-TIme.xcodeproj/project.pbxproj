@@ -10,6 +10,8 @@
 		4E8C7BD8465FB21726688FC6 /* Pods_Break_TIme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FADA2F5AC83956BD2F36646 /* Pods_Break_TIme.framework */; };
 		6F2C7C921F56887D0014B270 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C7C911F56887D0014B270 /* CreateGroupVC.swift */; };
 		6F2C7C941F568C480014B270 /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C7C931F568C480014B270 /* userCell.swift */; };
+		6F3048271F57FB0100767191 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3048261F57FB0100767191 /* GroupFeedCell.swift */; };
+		6F30482A1F57FC5500767191 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3048291F57FC5500767191 /* GroupFeedVC.swift */; };
 		6F390CA61F55938A00742F7D /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F390CA51F55938A00742F7D /* MeVC.swift */; };
 		6F390CA81F559C2E00742F7D /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F390CA71F559C2E00742F7D /* CreatePostVC.swift */; };
 		6F390CAA1F55A27800742F7D /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F390CA91F55A27800742F7D /* UIViewExt.swift */; };
@@ -38,6 +40,8 @@
 		5B5032B31B7A58FEED2AD481 /* Pods-Break-TIme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Break-TIme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Break-TIme/Pods-Break-TIme.release.xcconfig"; sourceTree = "<group>"; };
 		6F2C7C911F56887D0014B270 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
 		6F2C7C931F568C480014B270 /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
+		6F3048261F57FB0100767191 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		6F3048291F57FC5500767191 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		6F390CA51F55938A00742F7D /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		6F390CA71F559C2E00742F7D /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		6F390CA91F55A27800742F7D /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				6F390CA51F55938A00742F7D /* MeVC.swift */,
 				6F390CA71F559C2E00742F7D /* CreatePostVC.swift */,
 				6F2C7C911F56887D0014B270 /* CreateGroupVC.swift */,
+				6F3048291F57FC5500767191 /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				6F390CAD1F55F3FA00742F7D /* FeedCell.swift */,
 				6F2C7C931F568C480014B270 /* userCell.swift */,
 				6FFE6FC21F57448700859D71 /* GroupCell.swift */,
+				6F3048261F57FB0100767191 /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F390CAA1F55A27800742F7D /* UIViewExt.swift in Sources */,
+				6F30482A1F57FC5500767191 /* GroupFeedVC.swift in Sources */,
 				6F3CA9A01F5558EB0072E777 /* ShadowView.swift in Sources */,
 				6F3CA9991F554DC40072E777 /* AuthVC.swift in Sources */,
 				6F3CA9971F549CE90072E777 /* Constants.swift in Sources */,
@@ -329,6 +336,7 @@
 				6F390CA81F559C2E00742F7D /* CreatePostVC.swift in Sources */,
 				6F3CA9A21F555A4E0072E777 /* AuthService.swift in Sources */,
 				6F390CAE1F55F3FA00742F7D /* FeedCell.swift in Sources */,
+				6F3048271F57FB0100767191 /* GroupFeedCell.swift in Sources */,
 				6FF7A1C51F5497490011FC74 /* FeedVC.swift in Sources */,
 				6F2C7C941F568C480014B270 /* userCell.swift in Sources */,
 				6F3CA9941F549C6F0072E777 /* DataService.swift in Sources */,

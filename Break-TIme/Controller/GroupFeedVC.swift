@@ -9,18 +9,43 @@
 import UIKit
 
 class GroupFeedVC: UIViewController {
-
+    
+    // outlets
+    @IBOutlet weak var membersLbl: UILabel!
+    @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var messageField: InsetTextField!
+    @IBOutlet weak var sendBtnView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupTitleLbl: UILabel!
+    //variables
+    var group : Group?
+    func initData(forGroup group : Group){
+        self.group = group
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        messageField.delegate = self
+        sendBtnView.bindToKeyboard()
     }
 
-    
-    @IBAction func backBtnPressed(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        DataService.instance.getEmail(forGroup: group!) { (returnedEmail) in
+            self.membersLbl.text = returnedEmail.joined(separator: ",")
+        }
+        groupTitleLbl.text = group?.title
         
     }
     
+    @IBAction func sendBtnPressed(_ sender: Any) {
+    }
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
+
+extension GroupFeedVC : UITextFieldDelegate { }
